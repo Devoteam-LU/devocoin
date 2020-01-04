@@ -34,7 +34,7 @@ export default ({ accounts }) => (
     </div>
 
     <div className="section">
-      <h2>TutorialToken</h2>
+      <h2>DevocoinToken</h2>
       <p>
         Here we have a form with custom, friendly labels. Also note the token
         symbol will not display a loading indicator. We've suppressed it with
@@ -44,23 +44,23 @@ export default ({ accounts }) => (
       <p>
         <strong>Total Supply: </strong>
         <ContractData
-          contract="TutorialToken"
+          contract="DevocoinToken"
           method="totalSupply"
           methodArgs={[{ from: accounts[0] }]}
         />{" "}
-        <ContractData contract="TutorialToken" method="symbol" hideIndicator />
+        <ContractData contract="DevocoinToken" method="symbol" hideIndicator />
       </p>
       <p>
         <strong>My Balance: </strong>
         <ContractData
-          contract="TutorialToken"
+          contract="DevocoinToken"
           method="balanceOf"
           methodArgs={[accounts[0]]}
         />
       </p>
       <h3>Send Tokens</h3>
       <ContractForm
-        contract="TutorialToken"
+        contract="DevocoinToken"
         method="transfer"
         labels={["To Address", "Amount to Send"]}
       />
