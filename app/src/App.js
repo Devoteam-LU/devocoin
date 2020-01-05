@@ -7,16 +7,12 @@ import "./App.css";
 import drizzleOptions from "./drizzleOptions";
 import MyContainer from "./MyContainer";
 
-class App extends Component {
-  render() {
-    return (
-      <DrizzleProvider options={drizzleOptions}>
-        <LoadingContainer>
-          <MyContainer />
-        </LoadingContainer>
-      </DrizzleProvider>
-    );
-  }
-}
+const App = () => (
+  <DrizzleProvider options={drizzleOptions}>
+    <LoadingContainer>
+      <MyContainer />
+    </LoadingContainer>
+  </DrizzleProvider>
+);
 
 export default App;
