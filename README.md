@@ -16,3 +16,8 @@
 ## Todo
 
 - Contribute to Wiki
+
+## Help
+
+- The video series [Getting started with Azure Blockchain Service](https://www.youtube.com/watch?v=lYBhn7kRVHw) is useful if this is your first time working with the service.
+- The video [Introduction to Drizzle | Ethereum Dapp Tutorial with Drizzle](https://www.youtube.com/watch?v=QH_yLPYQEs4) is very helpful if you are new to [Drizzle](https://www.trufflesuite.com/boxes/drizzle), [truffle](https://www.trufflesuite.com/), or [Dapps](https://en.wikipedia.org/wiki/Decentralized_application)
