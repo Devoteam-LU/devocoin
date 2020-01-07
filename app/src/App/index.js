@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { DrizzleProvider } from '@drizzle/react-plugin';
 import { LoadingContainer } from '@drizzle/react-components';
 
