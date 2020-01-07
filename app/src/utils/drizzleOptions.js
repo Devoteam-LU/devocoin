@@ -1,9 +1,9 @@
 import Web3 from "web3";
-import SimpleStorage from "./contracts/SimpleStorage.json";
-import ComplexStorage from "./contracts/ComplexStorage.json";
-import DevocoinToken from "./contracts/DevocoinToken.json";
+import SimpleStorage from "../contracts/SimpleStorage.json";
+import ComplexStorage from "../contracts/ComplexStorage.json";
+import DevocoinToken from "../contracts/DevocoinToken.json";
 
-const options = {
+const drizzleOptions = {
   web3: {
     block: false,
     customProvider: new Web3("ws://localhost:8545"),
@@ -17,4 +17,4 @@ const options = {
   },
 };
 
-export default options;
+export default drizzleOptions;
