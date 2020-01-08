@@ -15,7 +15,8 @@ const App = () => (
       <Router>
         <Suspense fallback="...loading">
           <Switch>
-            <Route exact path="/" component={MyContainer} />
+          <Route exact path="/" component={MyContainer} />
+          <Route exact path="/wallet" component={MyContainer} />
           </Switch>
         </Suspense>
       </Router>
