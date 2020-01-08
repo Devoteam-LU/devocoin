@@ -7,7 +7,7 @@ import './App.css';
 
 import drizzleOptions from 'utils/drizzleOptions';
 
-const DrizzleConnector = React.lazy(() => import('containers/DrizzleConnector')); // Lazy-loaded
+const HomeContainer = React.lazy(() => import('containers/HomeContainer')); // Lazy-loaded
 
 const App = () => (
   <DrizzleProvider options={drizzleOptions}>
@@ -15,8 +15,8 @@ const App = () => (
       <Router>
         <Suspense fallback="...loading">
           <Switch>
-          <Route exact path="/" component={DrizzleConnector} />
-          <Route exact path="/wallet" component={DrizzleConnector} />
+          <Route exact path="/" component={HomeContainer} />
+          <Route exact path="/wallet" component={HomeContainer} />
           </Switch>
         </Suspense>
       </Router>

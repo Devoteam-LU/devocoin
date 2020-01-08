@@ -12,6 +12,6 @@ const mapStateToProps = ({
   drizzleStatus,
 });
 
-const DrizzleConnector = drizzleConnect(Home, mapStateToProps);
+const HomeContainer = drizzleConnect(Home, mapStateToProps);
 
-export default DrizzleConnector;
+export default HomeContainer;
