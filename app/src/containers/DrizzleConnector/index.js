@@ -1,5 +1,5 @@
 import { drizzleConnect } from '@drizzle/react-plugin';
-import MyComponent from 'components/MyComponent';
+import Home from 'components/Home';
 
 const mapStateToProps = ({
   accounts,
@@ -12,6 +12,6 @@ const mapStateToProps = ({
   drizzleStatus,
 });
 
-const DrizzleConnector = drizzleConnect(MyComponent, mapStateToProps);
+const DrizzleConnector = drizzleConnect(Home, mapStateToProps);
 
 export default DrizzleConnector;
