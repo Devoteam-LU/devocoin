@@ -1,5 +1,5 @@
 import { drizzleConnect } from '@drizzle/react-plugin';
-import Home from 'components/Home';
+import Home from 'pages/Home';
 
 const mapStateToProps = ({
   accounts,
