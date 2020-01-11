@@ -1,4 +1,5 @@
 import React from 'react';
+import QRCode from 'qrcode.react';
 import { drizzleReactHooks } from '@drizzle/react-plugin';
 import { newContextComponents } from '@drizzle/react-components';
 
@@ -32,7 +33,12 @@ const Wallet = () => {
         <button>send</button>
         <button>request</button>
       </div>
-      <div className="section">{accounts[0]}</div>
+      <div className="section">
+        {accounts[0]}
+        <br />
+        <br />
+        <QRCode value={accounts[0]} />
+      </div>
       <div className="section">
         <h2>Transactions</h2>
         {Object.values(transactions)
