@@ -15,7 +15,7 @@
 
 ## Todo
 
-- Contribute to Wiki
+See [Devocoin Project Board](https://github.com/Devoteam-LU/devocoin/projects/1)
 
 ## Help
 
