@@ -8,7 +8,7 @@ const { AccountData, ContractData, ContractForm } = newContextComponents;
 
 const Home = () => {
   const { drizzle } = useDrizzle();
-  const drizzleState = useDrizzleState(state => state);
+  const drizzleState = useDrizzleState((state: any) => state);
   const { accounts } = drizzleState;
 
   return (
@@ -45,11 +45,7 @@ const Home = () => {
             method="storedData"
           />
         </p>
-        <ContractForm
-          drizzle={drizzle}
-          contract="SimpleStorage"
-          method="set"
-        />
+        <ContractForm drizzle={drizzle} contract="SimpleStorage" method="set" />
       </div>
 
       <div className="section">
