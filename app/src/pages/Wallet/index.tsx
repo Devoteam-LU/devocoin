@@ -6,11 +6,26 @@ import { newContextComponents } from '@drizzle/react-components';
 const { useDrizzle, useDrizzleState } = drizzleReactHooks;
 const { ContractData } = newContextComponents;
 
+const filterTransactions = ({ status }: any): boolean => status === 'success';
+const mapTransactions = ({
+  receipt: {
+    events: {
+      Transfer: {
+        returnValues: { to, value },
+      },
+    },
+  },
+}: any) => (
+  <div>
+    {to}: {value}
+  </div>
+);
+
 const Wallet = () => {
   const { drizzle } = useDrizzle();
-  const drizzleState = useDrizzleState(state => state);
+  const drizzleState = useDrizzleState((state: any) => state);
   const { accounts, transactions } = drizzleState;
-
+  
   return (
     <div className="App">
       <div className="section">
@@ -42,12 +57,8 @@ const Wallet = () => {
       <div className="section">
         <h2>Transactions</h2>
         {Object.values(transactions)
-          .filter(({ status }) => status === 'success')
-          .map(({ receipt: { events: { Transfer: { returnValues: { to, value } } } } }) => (
-            <div>
-              {to}: {value}
-            </div>
-          ))}
+          .filter(filterTransactions)
+          .map(mapTransactions)}
       </div>
     </div>
   );
