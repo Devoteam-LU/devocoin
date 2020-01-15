@@ -7,13 +7,9 @@
 - Download [Visual Studio Code](https://code.visualstudio.com/)
 - Install the extension [Azure Blockchain Development Kit for Ethereum and it's prerequisites](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - Clone the [devocoin repository](https://github.com/Devoteam-LU/devocoin)
-- Pick a [todo](#todo) and open a [pull request](https://github.com/Devoteam-LU/devocoin/pulls)
+- Pick a [task](#contribute) and open a [pull request](https://github.com/Devoteam-LU/devocoin/pulls)
 
-## In progress
-
-- Update Readme
-
-## Todo
+## Contribute
 
 See [Devocoin Project Board](https://github.com/Devoteam-LU/devocoin/projects/1)
 
