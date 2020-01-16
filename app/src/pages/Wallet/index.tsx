@@ -1,9 +1,8 @@
 import React from 'react';
 import QRCode from 'qrcode.react';
-import { drizzleReactHooks } from '@drizzle/react-plugin';
 import { newContextComponents } from '@drizzle/react-components';
+import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
 
-const { useDrizzle, useDrizzleState } = drizzleReactHooks;
 const { ContractData } = newContextComponents;
 
 const filterTransactions = ({ status }: any): boolean => status === 'success';
@@ -23,7 +22,7 @@ const mapTransactions = ({
 
 const Wallet = () => {
   const { drizzle } = useDrizzle();
-  const drizzleState = useDrizzleState((state: any) => state);
+  const drizzleState = useDrizzleState();
   const { accounts, transactions } = drizzleState;
   
   return (
