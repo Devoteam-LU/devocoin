@@ -1,14 +1,13 @@
 import React from 'react';
-import { drizzleReactHooks } from '@drizzle/react-plugin';
 import { newContextComponents } from '@drizzle/react-components';
+import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
 import logo from 'assets/logo.png';
 
-const { useDrizzle, useDrizzleState } = drizzleReactHooks;
 const { AccountData, ContractData, ContractForm } = newContextComponents;
 
 const Home = () => {
   const { drizzle } = useDrizzle();
-  const drizzleState = useDrizzleState((state: any) => state);
+  const drizzleState = useDrizzleState();
   const { accounts } = drizzleState;
 
   return (
