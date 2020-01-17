@@ -1,6 +1,7 @@
 import React from 'react';
 import { newContextComponents } from '@drizzle/react-components';
 import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
+import Page from 'layouts/Page';
 import logo from 'assets/logo.png';
 
 const { AccountData, ContractData, ContractForm } = newContextComponents;
@@ -11,14 +12,14 @@ const Home = () => {
   const { accounts } = drizzleState;
 
   return (
-    <div className="App">
+    <Page title="Home">
       <div>
         <img src={logo} alt="drizzle-logo" />
         <h1>Drizzle Examples</h1>
         <p>Examples of how to get started with Drizzle in various situations.</p>
       </div>
 
-      <div className="section">
+      <div>
         <h2>Active Account</h2>
         <AccountData
           drizzle={drizzle}
@@ -29,7 +30,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="section">
+      <div>
         <h2>SimpleStorage</h2>
         <p>
           This shows a simple ContractData component with no arguments, along with a form to set its
@@ -47,7 +48,7 @@ const Home = () => {
         <ContractForm drizzle={drizzle} contract="SimpleStorage" method="set" />
       </div>
 
-      <div className="section">
+      <div>
         <h2>DevocoinToken</h2>
         <p>
           Here we have a form with custom, friendly labels. Also note the token symbol will not
@@ -89,7 +90,7 @@ const Home = () => {
           labels={['To Address', 'Amount to Send']}
         />
       </div>
-      <div className="section">
+      <div>
         <h2>ComplexStorage</h2>
         <p>
           Finally this contract shows data types with additional considerations. Note in the code
@@ -124,7 +125,7 @@ const Home = () => {
           method="singleDD"
         />
       </div>
-    </div>
+    </Page>
   );
 };
 
