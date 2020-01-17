@@ -3,6 +3,7 @@ import { IonButton } from '@ionic/react';
 import QRCode from 'qrcode.react';
 import { newContextComponents } from '@drizzle/react-components';
 import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
+import Page from 'layouts/Page';
 
 const { ContractData } = newContextComponents;
 
@@ -27,8 +28,8 @@ const Wallet = () => {
   const { accounts, transactions } = drizzleState;
 
   return (
-    <div className="App">
-      <div className="section">
+    <Page title="Wallet">
+      <div>
         <h2>My Balance</h2>
         <ContractData
           drizzle={drizzle}
@@ -48,19 +49,19 @@ const Wallet = () => {
         <IonButton>SEND</IonButton>
         <IonButton>REQUEST</IonButton>
       </div>
-      <div className="section">
+      <div>
         {accounts[0]}
         <br />
         <br />
         <QRCode value={accounts[0]} />
       </div>
-      <div className="section">
+      <div>
         <h2>Transactions</h2>
         {Object.values(transactions)
           .filter(filterTransactions)
           .map(mapTransactions)}
       </div>
-    </div>
+    </Page>
   );
 };
 
