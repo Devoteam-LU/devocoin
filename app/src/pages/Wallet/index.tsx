@@ -1,4 +1,5 @@
 import React from 'react';
+import { IonButton } from '@ionic/react';
 import QRCode from 'qrcode.react';
 import { newContextComponents } from '@drizzle/react-components';
 import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
@@ -24,7 +25,7 @@ const Wallet = () => {
   const { drizzle } = useDrizzle();
   const drizzleState = useDrizzleState();
   const { accounts, transactions } = drizzleState;
-  
+
   return (
     <div className="App">
       <div className="section">
@@ -44,8 +45,8 @@ const Wallet = () => {
           hideIndicator
         />
         <br />
-        <button>send</button>
-        <button>request</button>
+        <IonButton>SEND</IonButton>
+        <IonButton>REQUEST</IonButton>
       </div>
       <div className="section">
         {accounts[0]}
