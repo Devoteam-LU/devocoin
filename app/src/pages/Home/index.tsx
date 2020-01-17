@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { IonButton } from '@ionic/react';
 import { newContextComponents } from '@drizzle/react-components';
 import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
 import Page from 'layouts/Page';
@@ -124,6 +126,9 @@ const Home = () => {
           contract="ComplexStorage"
           method="singleDD"
         />
+        <Link to="/wallet">
+          <IonButton>Go to Wallet</IonButton>
+        </Link>
       </div>
     </Page>
   );
