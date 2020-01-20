@@ -1,12 +1,13 @@
 import React, { Suspense } from 'react';
 import { Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
+import { IonSplitPane, IonApp, IonPage } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 import { Drizzle } from '@drizzle/store';
 import { drizzleReactHooks } from '@drizzle/react-plugin';
 import drizzleOptions from 'utils/drizzleOptions';
 import Loading from 'components/Loading';
+import Navigation from 'layouts/Navigation';
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
 import '@ionic/react/css/structure.css';
@@ -30,10 +31,13 @@ const App = () => (
       <Loading>
         <IonReactRouter>
           <Suspense fallback="...loading">
-            <IonRouterOutlet>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/wallet" component={Wallet} />
-            </IonRouterOutlet>
+            <IonSplitPane contentId="mainContent">
+              <Navigation />
+              <IonPage id="mainContent">
+                <Route exact path="/" component={Home} />
+                <Route exact path="/wallet" component={Wallet} />
+              </IonPage>
+            </IonSplitPane>
           </Suspense>
         </IonReactRouter>
       </Loading>

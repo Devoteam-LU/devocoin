@@ -15,6 +15,9 @@ const Home = () => {
 
   return (
     <Page title="Home">
+      <Link to="/wallet">
+          <IonButton>Go to Wallet</IonButton>
+        </Link>
       <div>
         <img src={logo} alt="drizzle-logo" />
         <h1>Drizzle Examples</h1>
@@ -126,9 +129,6 @@ const Home = () => {
           contract="ComplexStorage"
           method="singleDD"
         />
-        <Link to="/wallet">
-          <IonButton>Go to Wallet</IonButton>
-        </Link>
       </div>
     </Page>
   );

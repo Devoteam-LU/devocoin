@@ -1,5 +1,15 @@
 import React from 'react';
-import { IonPage, IonHeader, IonTitle, IonToolbar, IonContent } from '@ionic/react';
+import {
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonButtons,
+  IonMenuToggle,
+  IonButton,
+  IonIcon,
+  IonContent,
+} from '@ionic/react';
+import { menu } from 'ionicons/icons';
 
 interface IPageProps {
   children: React.ReactNode;
@@ -7,14 +17,21 @@ interface IPageProps {
 }
 
 const Page = ({ children, title }: IPageProps) => (
-  <IonPage>
+  <>
     <IonHeader>
       <IonToolbar>
+        <IonButtons slot="start">
+          <IonMenuToggle>
+            <IonButton>
+              <IonIcon slot="icon-only" icon={menu}></IonIcon>
+            </IonButton>
+          </IonMenuToggle>
+        </IonButtons>
         <IonTitle>{title}</IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent>{children}</IonContent>
-  </IonPage>
+  </>
 );
 
 export default Page;
