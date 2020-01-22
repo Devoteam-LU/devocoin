@@ -11,6 +11,7 @@ import {
   IonItem,
   IonIcon,
   IonLabel,
+  IonMenuToggle,
 } from '@ionic/react';
 import { add } from 'ionicons/icons';
 
@@ -25,16 +26,20 @@ const Navigation = () => (
       <IonList>
         <IonListHeader>Navigate</IonListHeader>
         <Link to="/">
-          <IonItem button href="/">
-            <IonIcon slot="start" icon={add}></IonIcon>
-            <IonLabel>Home</IonLabel>
-          </IonItem>
+          <IonMenuToggle autoHide={false}>
+            <IonItem button href="/">
+              <IonIcon slot="start" icon={add}></IonIcon>
+              <IonLabel>Home</IonLabel>
+            </IonItem>
+          </IonMenuToggle>
         </Link>
         <Link to="/wallet">
-          <IonItem button>
-            <IonIcon slot="start" icon={add}></IonIcon>
-            <IonLabel>Wallet</IonLabel>
-          </IonItem>
+          <IonMenuToggle autoHide={false}>
+            <IonItem button>
+              <IonIcon slot="start" icon={add}></IonIcon>
+              <IonLabel>Wallet</IonLabel>
+            </IonItem>
+          </IonMenuToggle>
         </Link>
       </IonList>
     </IonContent>
