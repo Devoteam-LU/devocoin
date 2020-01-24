@@ -16,7 +16,7 @@ import {
 import { add } from 'ionicons/icons';
 
 const Navigation = () => (
-  <IonMenu contentId="mainContent">
+  <IonMenu contentId="mainContent" type="push">
     <IonHeader>
       <IonToolbar>
         <IonTitle>Menu</IonTitle>
@@ -28,7 +28,7 @@ const Navigation = () => (
         <Link to="/">
           <IonMenuToggle autoHide={false}>
             <IonItem button href="/">
-              <IonIcon slot="start" icon={add}></IonIcon>
+              <IonIcon slot="start" icon={add} />
               <IonLabel>Home</IonLabel>
             </IonItem>
           </IonMenuToggle>
@@ -36,7 +36,7 @@ const Navigation = () => (
         <Link to="/wallet">
           <IonMenuToggle autoHide={false}>
             <IonItem button>
-              <IonIcon slot="start" icon={add}></IonIcon>
+              <IonIcon slot="start" icon={add} />
               <IonLabel>Wallet</IonLabel>
             </IonItem>
           </IonMenuToggle>
