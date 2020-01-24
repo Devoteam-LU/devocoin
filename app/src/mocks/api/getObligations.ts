@@ -1,5 +1,5 @@
-import obligation from 'mocks/json/obligation.json'
+import { obligations } from 'mocks/json/obligations.json'
 
-const getObligations = () => ([obligation, obligation, obligation]);
+const getObligations = () => obligations;
 
 export default getObligations;
