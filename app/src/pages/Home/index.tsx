@@ -9,9 +9,11 @@ import {
   IonContent,
   IonListHeader,
   IonBadge,
+  IonIcon,
 } from '@ionic/react';
-import Page from 'layouts/Page';
+import { archive } from 'ionicons/icons';
 import getObligations from 'mocks/api/getObligations';
+import Page from 'layouts/Page';
 
 const Home = () => {
   const obligations = getObligations();
@@ -26,7 +28,7 @@ const Home = () => {
             <IonItemSliding key={index}>
               <IonItemOptions side="start">
                 <IonItemOption color="danger" onClick={() => {}}>
-                  Archive
+                  <IonIcon slot="start" icon={archive} size="large" />
                 </IonItemOption>
               </IonItemOptions>
               <IonItem button>
