@@ -31,11 +31,11 @@ const Home = () => {
               </IonItemOptions>
               <IonItem button>
                 <IonLabel>
-                  <h2>{new Date(dueDate).toLocaleDateString()}</h2>
-                  <h3>{title}</h3>
+                  <em>{new Date(dueDate).toLocaleDateString()}</em>
+                  <h2>{title}</h2>
                   <p>{description}</p>
                 </IonLabel>
-                <IonBadge slot="end">{`${value} Devocoin`}</IonBadge>
+                <IonBadge slot="end">{`${value} Ð`}</IonBadge>
               </IonItem>
               <IonItemOptions side="end">
                 <IonItemOption color="success" onClick={() => {}}>
