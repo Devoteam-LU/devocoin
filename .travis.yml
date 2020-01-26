@@ -1,11 +1,12 @@
 language: node_js
 node_js:
   - "stable"
+env:
+  - REACT_APP_DIR=app
 cache:
   directories:
     - node_modules
-env:
-  - REACT_APP_DIR=app
+    - $REACT_APP_DIR/node_modules
 script:
   - cd $REACT_APP_DIR
   - npm test
