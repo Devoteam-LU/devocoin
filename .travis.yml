@@ -8,7 +8,7 @@ cache:
     - node_modules
     - $REACT_APP_DIR/node_modules
 script:
-  - truffle compile
+  - npm run compile
   - cd $REACT_APP_DIR
   - npm ci
   - npm test
