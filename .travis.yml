@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+env:
+  - REACT_APP_DIR=app
+script:
+  - cd $REACT_APP_DIR
+  - npm test
+  - npm run build
+on:
+  branch: master
