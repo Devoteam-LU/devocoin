@@ -9,6 +9,7 @@ cache:
     - $REACT_APP_DIR/node_modules
 script:
   - cd $REACT_APP_DIR
+  - npm ci
   - npm test
   - npm run build
 on:
