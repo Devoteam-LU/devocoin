@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd app && npm start"
+    "start": "cd app && npm start",
+    "compile": "truffle compile"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "homepage": "https://github.com/truffle-box/drizzle-box#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^2.4.0"
+  },
+  "devDependencies": {
+    "truffle": "^5.1.10"
   }
 }

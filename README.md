@@ -1,4 +1,4 @@
-# devocoin
+# devocoin &middot; [![Build Status](https://travis-ci.org/typekev/react-mk.svg?branch=master)](https://travis-ci.org/typekev/react-mk)
 
 ## Getting started
 
