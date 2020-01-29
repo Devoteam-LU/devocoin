@@ -17,6 +17,7 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+import OfficerRoutes from 'routes/OfficerRoutes';
 
 const drizzle = new Drizzle(drizzleOptions);
 const { DrizzleProvider } = drizzleReactHooks;
@@ -31,6 +32,7 @@ const App = () => (
               <Navigation />
               <IonPage id="mainContent">
                 <SharedRoutes />
+                <OfficerRoutes />
               </IonPage>
             </IonSplitPane>
           </Suspense>

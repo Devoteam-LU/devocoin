@@ -1,13 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-const Home = React.lazy(() => import('pages/Home'));
-const Wallet = React.lazy(() => import('pages/Wallet'));
+const Obligations = React.lazy(() => import('pages/Obligations'));
 
 const OfficerRoutes = () => (
   <>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/wallet" component={Wallet} />
+    <Route exact path="/obligations" component={Obligations} />
   </>
 );
 
