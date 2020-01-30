@@ -18,31 +18,38 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 import OfficerRoutes from 'routes/OfficerRoutes';
+import ConsultantRoutes from 'routes/ConsultantRoutes';
 import { Route } from 'react-router';
+import getUser from 'mocks/api/getUser';
+import { UserGroup } from 'common/types';
 
 const drizzle = new Drizzle(drizzleOptions);
 const { DrizzleProvider } = drizzleReactHooks;
 
-const App = () => (
-  <DrizzleProvider drizzle={drizzle}>
-    <IonApp>
-      <Loading>
-        <IonReactRouter>
-          <Suspense fallback="...loading">
-            <IonSplitPane contentId="mainContent">
-              <Navigation />
-              <IonRouterOutlet id="mainContent">
-                <Route path="*">
-                  <SharedRoutes />
-                  <OfficerRoutes />
-                </Route>
-              </IonRouterOutlet>
-            </IonSplitPane>
-          </Suspense>
-        </IonReactRouter>
-      </Loading>
-    </IonApp>
-  </DrizzleProvider>
-);
+const App = () => {
+  const { userGroup } = getUser();
+  return (
+    <DrizzleProvider drizzle={drizzle}>
+      <IonApp>
+        <Loading>
+          <IonReactRouter>
+            <Suspense fallback="...loading">
+              <IonSplitPane contentId="mainContent">
+                <Navigation />
+                <IonRouterOutlet id="mainContent">
+                  <Route path="*">
+                    <SharedRoutes />
+                    {userGroup === UserGroup.Officer && <OfficerRoutes />}
+                    {userGroup === UserGroup.Consultant && <ConsultantRoutes />}
+                  </Route>
+                </IonRouterOutlet>
+              </IonSplitPane>
+            </Suspense>
+          </IonReactRouter>
+        </Loading>
+      </IonApp>
+    </DrizzleProvider>
+  );
+};
 
 export default App;
