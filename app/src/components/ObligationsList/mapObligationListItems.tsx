@@ -1,9 +1,10 @@
 import React from 'react';
 import ObligationListItem from 'components/ObligationListItem';
-import { Obligation } from 'common/types';
+import { Obligation, ObligationListItemOptions } from 'common/types';
 
-const renderObligationListItem = (props: Obligation, index: number) => (
-  <ObligationListItem {...props} key={index} />
-);
+const renderObligationListItem = ({ ...obligationListItemOptions }: ObligationListItemOptions) => (
+  obligation: Obligation,
+  index: number,
+) => <ObligationListItem key={index} {...obligationListItemOptions} {...obligation} />;
 
 export default renderObligationListItem;

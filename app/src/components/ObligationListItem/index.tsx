@@ -1,27 +1,20 @@
-import { Obligation } from 'common/types';
-import { archive } from 'ionicons/icons';
 import React from 'react';
+import { Obligation, ObligationListItemOptions } from 'common/types';
+import { IonBadge, IonItem, IonItemOptions, IonItemSliding, IonLabel } from '@ionic/react';
 
-import {
-  IonBadge,
-  IonIcon,
-  IonItem,
-  IonItemOption,
-  IonItemOptions,
-  IonItemSliding,
-  IonLabel,
-} from '@ionic/react';
+interface Props extends Obligation, ObligationListItemOptions {}
 
-interface Props extends Obligation {}
-
-const ObligationListItem = ({ title, description, dueDate, value }: Props) => {
+const ObligationListItem = ({
+  title,
+  description,
+  dueDate,
+  value,
+  startOption,
+  endOption,
+}: Props) => {
   return (
     <IonItemSliding>
-      <IonItemOptions side="start">
-        <IonItemOption color="danger" onClick={() => {}}>
-          <IonIcon slot="start" icon={archive} size="large" />
-        </IonItemOption>
-      </IonItemOptions>
+      {startOption && <IonItemOptions side="start">{startOption}</IonItemOptions>}
       <IonItem button>
         <IonLabel>
           <em>{new Date(dueDate).toLocaleDateString()}</em>
@@ -30,11 +23,7 @@ const ObligationListItem = ({ title, description, dueDate, value }: Props) => {
         </IonLabel>
         <IonBadge slot="end">{`${value} Ð`}</IonBadge>
       </IonItem>
-      <IonItemOptions side="end">
-        <IonItemOption color="success" onClick={() => {}}>
-          Complete
-        </IonItemOption>
-      </IonItemOptions>
+      {endOption && <IonItemOptions side="end">{endOption}</IonItemOptions>}
     </IonItemSliding>
   );
 };
