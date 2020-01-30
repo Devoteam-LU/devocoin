@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { IonSplitPane, IonApp, IonPage } from '@ionic/react';
+import { IonSplitPane, IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Drizzle } from '@drizzle/store';
 import { drizzleReactHooks } from '@drizzle/react-plugin';
@@ -18,6 +18,7 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 import OfficerRoutes from 'routes/OfficerRoutes';
+import { Route } from 'react-router';
 
 const drizzle = new Drizzle(drizzleOptions);
 const { DrizzleProvider } = drizzleReactHooks;
@@ -30,10 +31,12 @@ const App = () => (
           <Suspense fallback="...loading">
             <IonSplitPane contentId="mainContent">
               <Navigation />
-              <IonPage id="mainContent">
-                <SharedRoutes />
-                <OfficerRoutes />
-              </IonPage>
+              <IonRouterOutlet id="mainContent">
+                <Route path="*">
+                  <SharedRoutes />
+                  <OfficerRoutes />
+                </Route>
+              </IonRouterOutlet>
             </IonSplitPane>
           </Suspense>
         </IonReactRouter>

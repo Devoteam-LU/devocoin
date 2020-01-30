@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  IonPage,
   IonHeader,
   IonTitle,
   IonToolbar,
@@ -17,7 +18,7 @@ interface IPageProps {
 }
 
 const Page = ({ children, title }: IPageProps) => (
-  <>
+  <IonPage>
     <IonHeader>
       <IonToolbar>
         <IonButtons slot="start">
@@ -31,7 +32,7 @@ const Page = ({ children, title }: IPageProps) => (
       </IonToolbar>
     </IonHeader>
     <IonContent>{children}</IonContent>
-  </>
+  </IonPage>
 );
 
 export default Page;
