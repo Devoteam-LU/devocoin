@@ -2,14 +2,12 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { IonRouterOutlet } from '@ionic/react';
 
-const Home = React.lazy(() => import('pages/Home'));
-const Wallet = React.lazy(() => import('pages/Wallet'));
+const ConsultantObligations = React.lazy(() => import('pages/Obligations/ConsultantObligations'));
 
-const ConsultantRoutes = () => (
+const OfficerRoutes = () => (
   <IonRouterOutlet>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/wallet" component={Wallet} />
+    <Route exact path="/obligations" component={ConsultantObligations} />
   </IonRouterOutlet>
 );
 
-export default ConsultantRoutes;
+export default OfficerRoutes;

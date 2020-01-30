@@ -2,11 +2,11 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { IonRouterOutlet } from '@ionic/react';
 
-const Obligations = React.lazy(() => import('pages/Obligations'));
+const OfficerObligations = React.lazy(() => import('pages/Obligations/OfficerObligations'));
 
 const OfficerRoutes = () => (
   <IonRouterOutlet>
-    <Route exact path="/obligations" component={Obligations} />
+    <Route exact path="/obligations" component={OfficerObligations} />
   </IonRouterOutlet>
 );
 
