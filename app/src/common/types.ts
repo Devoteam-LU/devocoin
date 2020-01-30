@@ -18,6 +18,7 @@ export interface Obligation {
     description: string;
     dueDate: number;
     value: number;
+    avatar?: string;
 }
 
 export interface ObligationListItemOptions {

@@ -1,6 +1,13 @@
 import React from 'react';
 import { Obligation, ObligationListItemOptions } from 'common/types';
-import { IonBadge, IonItem, IonItemOptions, IonItemSliding, IonLabel } from '@ionic/react';
+import {
+  IonBadge,
+  IonItem,
+  IonItemOptions,
+  IonItemSliding,
+  IonLabel,
+  IonAvatar,
+} from '@ionic/react';
 
 interface Props extends Obligation, ObligationListItemOptions {}
 
@@ -9,6 +16,7 @@ const ObligationListItem = ({
   description,
   dueDate,
   value,
+  avatar,
   startOption,
   endOption,
 }: Props) => {
@@ -16,6 +24,11 @@ const ObligationListItem = ({
     <IonItemSliding>
       {startOption && <IonItemOptions side="start">{startOption}</IonItemOptions>}
       <IonItem button>
+        {avatar && (
+          <IonAvatar slot="start">
+            <img src={avatar} alt="user image" />
+          </IonAvatar>
+        )}
         <IonLabel>
           <em>{new Date(dueDate).toLocaleDateString()}</em>
           <h2>{title}</h2>
