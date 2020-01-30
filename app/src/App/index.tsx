@@ -7,6 +7,11 @@ import drizzleOptions from 'utils/drizzleOptions';
 import Navigation from 'layouts/Navigation';
 import SharedRoutes from 'routes/SharedRoutes';
 import Loading from 'components/Loading';
+import OfficerRoutes from 'routes/OfficerRoutes';
+import ConsultantRoutes from 'routes/ConsultantRoutes';
+import { Route } from 'react-router';
+import getUser from 'mocks/api/getUser';
+import { UserGroup } from 'common/types';
 import '@ionic/react/css/core.css';
 import '@ionic/react/css/normalize.css';
 import '@ionic/react/css/structure.css';
@@ -17,17 +22,18 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
-import OfficerRoutes from 'routes/OfficerRoutes';
-import ConsultantRoutes from 'routes/ConsultantRoutes';
-import { Route } from 'react-router';
-import getUser from 'mocks/api/getUser';
-import { UserGroup } from 'common/types';
+import './darkMode.css';
 
 const drizzle = new Drizzle(drizzleOptions);
 const { DrizzleProvider } = drizzleReactHooks;
 
 const App = () => {
   const { userGroup } = getUser();
+
+  if (userGroup === UserGroup.Officer) {
+    document.body.classList.toggle('dark', true);
+  }
+
   return (
     <DrizzleProvider drizzle={drizzle}>
       <IonApp>
