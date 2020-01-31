@@ -10,8 +10,11 @@ import {
   IonListHeader,
   IonBadge,
   IonIcon,
+  IonFooter,
+  IonToolbar,
+  IonAvatar
 } from '@ionic/react';
-import { archive } from 'ionicons/icons';
+import { archive, addCircle, search, send, informationCircle } from 'ionicons/icons';
 import getObligations from 'mocks/api/getObligations';
 import Page from 'layouts/Page';
 
@@ -48,6 +51,17 @@ const Home = () => {
           ))}
         </IonList>
       </IonContent>
+      <IonFooter>
+         <IonToolbar>
+                  <IonIcon icon={addCircle}></IonIcon>
+                  <IonIcon icon={search}></IonIcon>
+                  <IonIcon icon={addCircle}></IonIcon>
+                  <IonIcon icon={send}></IonIcon>
+                  <IonAvatar>
+                      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+                  </IonAvatar>
+        </IonToolbar>
+      </IonFooter>
     </Page>
   );
 };
