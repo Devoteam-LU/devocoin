@@ -6,8 +6,8 @@
     "@drizzle/react-components": "^1.5.1",
     "@drizzle/react-plugin": "^1.5.1",
     "@drizzle/store": "^1.5.1",
-    "@ionic/react": "^4.11.8",
-    "@ionic/react-router": "^4.11.8",
+    "@ionic/react": "^4.11.10",
+    "@ionic/react-router": "^4.11.10",
     "@types/jest": "^24.9.0",
     "@types/node": "^13.1.7",
     "@types/qrcode.react": "^1.0.0",
@@ -24,7 +24,8 @@
   },
   "devDependencies": {
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.0.0"
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.20.0"
   },
   "scripts": {
     "start": "react-scripts start",

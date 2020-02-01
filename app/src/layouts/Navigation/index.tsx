@@ -4,10 +4,8 @@ import {
   IonMenu,
   IonHeader,
   IonToolbar,
-  IonTitle,
   IonContent,
   IonList,
-  IonListHeader,
   IonItem,
   IonIcon,
   IonLabel,
@@ -18,13 +16,10 @@ import { add } from 'ionicons/icons';
 const Navigation = () => (
   <IonMenu contentId="mainContent" type="push">
     <IonHeader>
-      <IonToolbar>
-        <IonTitle>Menu</IonTitle>
-      </IonToolbar>
+      <IonToolbar />
     </IonHeader>
     <IonContent>
       <IonList>
-        <IonListHeader>Navigate</IonListHeader>
         <Link to="/">
           <IonMenuToggle autoHide={false}>
             <IonItem button href="/">
@@ -38,6 +33,14 @@ const Navigation = () => (
             <IonItem button>
               <IonIcon slot="start" icon={add} />
               <IonLabel>Wallet</IonLabel>
+            </IonItem>
+          </IonMenuToggle>
+        </Link>
+        <Link to="/obligations">
+          <IonMenuToggle autoHide={false}>
+            <IonItem button>
+              <IonIcon slot="start" icon={add} />
+              <IonLabel>Obligations</IonLabel>
             </IonItem>
           </IonMenuToggle>
         </Link>
