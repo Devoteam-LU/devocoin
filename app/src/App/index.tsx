@@ -4,11 +4,12 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Drizzle } from '@drizzle/store';
 import { drizzleReactHooks } from '@drizzle/react-plugin';
 import drizzleOptions from 'utils/drizzleOptions';
+import Home from 'pages/Home';
+import Wallet from 'pages/Wallet';
+import OfficerObligations from 'pages/Obligations/OfficerObligations';
+import ConsultantObligations from 'pages/Obligations/ConsultantObligations';
 import Navigation from 'layouts/Navigation';
-import SharedRoutes from 'routes/SharedRoutes';
 import Loading from 'components/Loading';
-import OfficerRoutes from 'routes/OfficerRoutes';
-import ConsultantRoutes from 'routes/ConsultantRoutes';
 import { Route } from 'react-router';
 import getUser from 'mocks/api/getUser';
 import { UserGroup } from 'common/types';
@@ -43,11 +44,13 @@ const App = () => {
               <IonSplitPane contentId="mainContent">
                 <Navigation />
                 <IonRouterOutlet id="mainContent">
-                  <Route path="*">
-                    <SharedRoutes />
-                    {userGroup === UserGroup.Officer && <OfficerRoutes />}
-                    {userGroup === UserGroup.Consultant && <ConsultantRoutes />}
-                  </Route>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/wallet" component={Wallet} />
+                  <Route
+                    exact
+                    path="/obligations"
+                    component={UserGroup.Officer ? OfficerObligations : ConsultantObligations}
+                  />
                 </IonRouterOutlet>
               </IonSplitPane>
             </Suspense>
