@@ -26,7 +26,7 @@ const ObligationListItem = ({
       <IonItem button>
         {avatar && (
           <IonAvatar slot="start">
-            <img src={avatar} alt="user image" />
+            <img src={avatar} alt="user profile" />
           </IonAvatar>
         )}
         <IonLabel>
