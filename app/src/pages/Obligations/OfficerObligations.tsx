@@ -1,11 +1,11 @@
 import React from 'react';
 import { IonItemOption } from '@ionic/react';
-import getObligations from 'mocks/api/getObligations';
+import getObligationsPendingApproval from 'mocks/api/getObligationsPendingApproval';
 import ObligationsList from 'components/ObligationsList';
 import ConsultantObligations from './ConsultantObligations';
 
 const OfficerObligations = () => {
-  const obligations = getObligations();
+  const obligations = getObligationsPendingApproval();
   return (
     <ConsultantObligations>
       <ObligationsList
