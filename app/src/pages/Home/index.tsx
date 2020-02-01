@@ -1,15 +1,27 @@
 import React from 'react';
-import { IonContent, IonItemOption, IonIcon } from '@ionic/react';
+import { IonContent, IonItemOption, IonIcon, IonGrid, IonRow, IonCol } from '@ionic/react';
 import getObligations from 'mocks/api/getObligations';
 import Page from 'layouts/Page';
 import ObligationsList from 'components/ObligationsList';
 import { archive } from 'ionicons/icons';
+import Coins from 'components/Coins';
+import Rank from 'components/Rank';
 
 const Home = () => {
   const obligations = getObligations();
   return (
     <Page title="Home">
       <IonContent>
+        <IonGrid>
+          <IonRow>
+            <IonCol>
+              <Coins>360</Coins>
+            </IonCol>
+            <IonCol>
+              <Rank>3/116</Rank>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
         <ObligationsList
           obligations={obligations}
           startOption={
