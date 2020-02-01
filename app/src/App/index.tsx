@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { IonSplitPane, IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { Drizzle } from '@drizzle/store';
@@ -40,20 +40,18 @@ const App = () => {
       <IonApp>
         <Loading>
           <IonReactRouter>
-            <Suspense fallback="...loading">
-              <IonSplitPane contentId="mainContent">
-                <Navigation />
-                <IonRouterOutlet id="mainContent">
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/wallet" component={Wallet} />
-                  <Route
-                    exact
-                    path="/obligations"
-                    component={UserGroup.Officer ? OfficerObligations : ConsultantObligations}
-                  />
-                </IonRouterOutlet>
-              </IonSplitPane>
-            </Suspense>
+            <IonSplitPane contentId="mainContent">
+              <Navigation />
+              <IonRouterOutlet id="mainContent">
+                <Route exact path="/" component={Home} />
+                <Route exact path="/wallet" component={Wallet} />
+                <Route
+                  exact
+                  path="/obligations"
+                  component={UserGroup.Officer ? OfficerObligations : ConsultantObligations}
+                />
+              </IonRouterOutlet>
+            </IonSplitPane>
           </IonReactRouter>
         </Loading>
       </IonApp>
