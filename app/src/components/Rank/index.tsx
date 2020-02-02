@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonCard, IonCardHeader, IonCardSubtitle, IonCardContent, IonItem } from '@ionic/react';
+import { IonCard, IonCardHeader, IonCardSubtitle, IonCardContent } from '@ionic/react';
 
 interface Props {
   children: React.ReactNode;
@@ -7,17 +7,15 @@ interface Props {
 
 const Rank = ({ children }: Props) => {
   return (
-    <IonCard color="tertiary">
+    <IonCard button color="tertiary" href="#">
       <IonCardHeader>
         <IonCardSubtitle>Rank</IonCardSubtitle>
       </IonCardHeader>
-      <IonItem button color="tertiary" href="#">
-        <IonCardContent>
-          <h1>
-            <strong>{children}</strong>
-          </h1>
-        </IonCardContent>
-      </IonItem>
+      <IonCardContent>
+        <h1>
+          <strong>{children}</strong>
+        </h1>
+      </IonCardContent>
     </IonCard>
   );
 };

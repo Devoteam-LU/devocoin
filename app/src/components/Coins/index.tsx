@@ -7,17 +7,15 @@ interface Props {
 
 const Coins = ({ children }: Props) => {
   return (
-    <IonCard color="success">
+    <IonCard button color="success" href="#">
       <IonCardHeader>
         <IonCardSubtitle>Devocoins</IonCardSubtitle>
       </IonCardHeader>
-      <IonItem button color="success" href="#">
-        <IonCardContent>
-          <h1>
-            <strong>{`${children} Ð`}</strong>
-          </h1>
-        </IonCardContent>
-      </IonItem>
+      <IonCardContent>
+        <h1>
+          <strong>{`${children} Ð`}</strong>
+        </h1>
+      </IonCardContent>
     </IonCard>
   );
 };
