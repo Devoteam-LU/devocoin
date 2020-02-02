@@ -17,7 +17,7 @@ const Home = () => {
             <Coins>360</Coins>
           </IonCol>
           <IonCol>
-            <Rank>3/116</Rank>
+            <Rank ordinal={3} outOf={116} />
           </IonCol>
         </IonRow>
         <IonRow>

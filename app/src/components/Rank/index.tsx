@@ -6,16 +6,19 @@ import {
   IonCardContent,
   IonItem,
   IonIcon,
+  IonText,
 } from '@ionic/react';
 import { trophy } from 'ionicons/icons';
+import getOrdinalSuffixOf from 'utils/getOrdinalSuffixOf';
 
 interface Props {
-  children: React.ReactNode;
+  ordinal: number;
+  outOf: number;
 }
 
-const Rank = ({ children }: Props) => {
+const Rank = ({ ordinal, outOf }: Props) => {
   return (
-    <IonCard routerLink="/wallet" color="tertiary">
+    <IonCard routerLink="/" color="tertiary">
       <IonCardHeader>
         <IonCardSubtitle>Rank</IonCardSubtitle>
       </IonCardHeader>
@@ -23,8 +26,9 @@ const Rank = ({ children }: Props) => {
         <IonItem button color="inherit" lines="none">
           <IonIcon slot="start" icon={trophy} />
           <h1>
-            <strong>{children}</strong>
+            <strong>{`${ordinal}${getOrdinalSuffixOf(ordinal)}`}</strong>
           </h1>
+          <IonText>{`\xa0\xa0\xa0/\xa0\xa0${outOf}`}</IonText>
         </IonItem>
       </IonCardContent>
     </IonCard>
