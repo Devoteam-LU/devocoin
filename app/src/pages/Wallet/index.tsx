@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { IonButton } from '@ionic/react';
 import QRCode from 'qrcode.react';
 import { newContextComponents } from '@drizzle/react-components';
@@ -62,9 +61,6 @@ const Wallet = () => {
           .filter(filterTransactions)
           .map(mapTransactions)}
       </div>
-      <Link to="/">
-        <IonButton>Go to Home</IonButton>
-      </Link>
     </Page>
   );
 };
