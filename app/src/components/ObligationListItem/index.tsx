@@ -23,7 +23,7 @@ const ObligationListItem = ({
   return (
     <IonItemSliding>
       {startOption && <IonItemOptions side="start">{startOption}</IonItemOptions>}
-      <IonItem button>
+      <IonItem routerLink="/obligations">
         {avatar && (
           <IonAvatar slot="start">
             <img src={avatar} alt="user profile" />
