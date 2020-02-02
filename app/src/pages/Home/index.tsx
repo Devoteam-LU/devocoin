@@ -11,31 +11,33 @@ const Home = () => {
   const obligations = getObligations();
   return (
     <Page title="Home">
-      <IonContent>
-        <IonGrid>
-          <IonRow>
-            <IonCol>
-              <Coins>360</Coins>
-            </IonCol>
-            <IonCol>
-              <Rank>3/116</Rank>
-            </IonCol>
-          </IonRow>
-        </IonGrid>
-        <ObligationsList
-          obligations={obligations}
-          startOption={
-            <IonItemOption color="danger" onClick={() => {}}>
-              <IonIcon slot="start" icon={archive} size="large" />
-            </IonItemOption>
-          }
-          endOption={
-            <IonItemOption color="success" onClick={() => {}}>
-              Complete
-            </IonItemOption>
-          }
-        />
-      </IonContent>
+      <IonGrid>
+        <IonRow>
+          <IonCol>
+            <Coins>360</Coins>
+          </IonCol>
+          <IonCol>
+            <Rank>3/116</Rank>
+          </IonCol>
+        </IonRow>
+        <IonRow>
+          <IonCol>
+            <ObligationsList
+              obligations={obligations}
+              startOption={
+                <IonItemOption color="danger" onClick={() => {}}>
+                  <IonIcon slot="start" icon={archive} size="large" />
+                </IonItemOption>
+              }
+              endOption={
+                <IonItemOption color="success" onClick={() => {}}>
+                  Complete
+                </IonItemOption>
+              }
+            />
+          </IonCol>
+        </IonRow>
+      </IonGrid>
     </Page>
   );
 };
