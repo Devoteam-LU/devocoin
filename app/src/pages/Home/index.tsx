@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonContent, IonItemOption, IonIcon, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonItemOption, IonIcon, IonGrid, IonRow, IonCol } from '@ionic/react';
 import getObligations from 'mocks/api/getObligations';
 import Page from 'layouts/Page';
 import ObligationsList from 'components/ObligationsList';

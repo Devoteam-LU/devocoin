@@ -1,5 +1,4 @@
 import React from 'react';
-import { drizzleReactHooks } from '@drizzle/react-plugin';
 import { IonLoading } from '@ionic/react';
 import { useDrizzleState } from 'utils/drizzleHooks';
 
