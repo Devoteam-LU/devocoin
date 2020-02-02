@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   IonMenu,
   IonHeader,
@@ -20,30 +19,24 @@ const Navigation = () => (
     </IonHeader>
     <IonContent>
       <IonList>
-        <Link to="/">
-          <IonMenuToggle autoHide={false}>
-            <IonItem button href="/">
-              <IonIcon slot="start" icon={add} />
-              <IonLabel>Home</IonLabel>
-            </IonItem>
-          </IonMenuToggle>
-        </Link>
-        <Link to="/wallet">
-          <IonMenuToggle autoHide={false}>
-            <IonItem button>
-              <IonIcon slot="start" icon={add} />
-              <IonLabel>Wallet</IonLabel>
-            </IonItem>
-          </IonMenuToggle>
-        </Link>
-        <Link to="/obligations">
-          <IonMenuToggle autoHide={false}>
-            <IonItem button>
-              <IonIcon slot="start" icon={add} />
-              <IonLabel>Obligations</IonLabel>
-            </IonItem>
-          </IonMenuToggle>
-        </Link>
+        <IonMenuToggle autoHide={false}>
+          <IonItem routerLink="/">
+            <IonIcon slot="start" icon={add} />
+            <IonLabel>Home</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
+        <IonMenuToggle autoHide={false}>
+          <IonItem routerLink="/wallet">
+            <IonIcon slot="start" icon={add} />
+            <IonLabel>Wallet</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
+        <IonMenuToggle autoHide={false}>
+          <IonItem routerLink="/obligations">
+            <IonIcon slot="start" icon={add} />
+            <IonLabel>Obligations</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
       </IonList>
     </IonContent>
   </IonMenu>

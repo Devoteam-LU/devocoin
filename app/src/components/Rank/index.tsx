@@ -7,7 +7,7 @@ interface Props {
 
 const Rank = ({ children }: Props) => {
   return (
-    <IonCard button color="tertiary" href="#">
+    <IonCard routerLink="/wallet" color="tertiary">
       <IonCardHeader>
         <IonCardSubtitle>Rank</IonCardSubtitle>
       </IonCardHeader>

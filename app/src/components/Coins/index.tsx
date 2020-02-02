@@ -1,5 +1,10 @@
 import React from 'react';
-import { IonCard, IonCardHeader, IonCardSubtitle, IonCardContent, IonItem } from '@ionic/react';
+import {
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardContent,
+} from '@ionic/react';
 
 interface Props {
   children: React.ReactNode;
@@ -7,7 +12,7 @@ interface Props {
 
 const Coins = ({ children }: Props) => {
   return (
-    <IonCard button color="success" href="#">
+    <IonCard routerLink="/wallet" color="success">
       <IonCardHeader>
         <IonCardSubtitle>Devocoins</IonCardSubtitle>
       </IonCardHeader>
