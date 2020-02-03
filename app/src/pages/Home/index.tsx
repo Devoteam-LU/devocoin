@@ -4,7 +4,7 @@ import getObligations from 'mocks/api/getObligations';
 import Page from 'layouts/Page';
 import ObligationsList from 'components/ObligationsList';
 import { archive } from 'ionicons/icons';
-import Coins from 'components/Coins';
+import Coins from 'components/CoinsCard';
 import Rank from 'components/Rank';
 
 const Home = () => {

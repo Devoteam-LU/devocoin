@@ -3,7 +3,7 @@ import { IonButton } from '@ionic/react';
 import QRCode from 'qrcode.react';
 import { useDrizzleState } from 'utils/drizzleHooks';
 import Page from 'layouts/Page';
-import Coins from 'components/Coins';
+import Coins from 'components/CoinsCard';
 
 const filterTransactions = ({ status }: any): boolean => status === 'success';
 const mapTransactions = ({
