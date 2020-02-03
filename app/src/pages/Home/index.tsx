@@ -14,7 +14,7 @@ const Home = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-            <Coins>360</Coins>
+            <Coins />
           </IonCol>
           <IonCol>
             <Rank ordinal={3} outOf={116} />
