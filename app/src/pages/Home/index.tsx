@@ -5,7 +5,7 @@ import Page from 'layouts/Page';
 import ObligationsList from 'components/ObligationsList';
 import { archive } from 'ionicons/icons';
 import Coins from 'components/CoinsCard';
-import Rank from 'components/Rank';
+import Rank from 'components/RankCard';
 
 const Home = () => {
   const obligations = getObligations();
