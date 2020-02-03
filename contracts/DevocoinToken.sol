@@ -6,7 +6,7 @@ contract DevocoinToken is ERC20 {
     string public name = "DevocoinToken";
     string public symbol = "Ð";
     uint public decimals = 2;
-    uint public INITIAL_SUPPLY = 12000;
+    uint public INITIAL_SUPPLY = 360;
 
     constructor() public {
         _mint(msg.sender, INITIAL_SUPPLY);
