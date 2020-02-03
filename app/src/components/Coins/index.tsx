@@ -19,12 +19,12 @@ const Coins = () => {
   const { accounts } = drizzleState;
 
   return (
-    <IonCard routerLink="/wallet" color="success">
+    <IonCard color="success">
       <IonCardHeader>
         <IonCardSubtitle>Devocoins</IonCardSubtitle>
       </IonCardHeader>
       <IonCardContent>
-        <IonItem button color="inherit" lines="none">
+        <IonItem color="inherit" lines="none">
           <IonIcon slot="start" icon={wallet} />
           <h1>
             <strong>

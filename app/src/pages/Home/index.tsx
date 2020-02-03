@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonItemOption, IonIcon, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonItemOption, IonIcon, IonGrid, IonRow, IonCol, IonRouterLink } from '@ionic/react';
 import getObligations from 'mocks/api/getObligations';
 import Page from 'layouts/Page';
 import ObligationsList from 'components/ObligationsList';
@@ -14,7 +14,9 @@ const Home = () => {
       <IonGrid>
         <IonRow>
           <IonCol>
-            <Coins />
+            <IonRouterLink routerLink="/wallet">
+              <Coins />
+            </IonRouterLink>
           </IonCol>
           <IonCol>
             <Rank ordinal={3} outOf={116} />
