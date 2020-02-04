@@ -49,9 +49,9 @@ const Home = () => {
                         <IonIcon icon={send} size="large" />
                     </IonTabButton>
                     <IonTabButton tab="profile">
-                        <IonAvatar>
-                            <img src="../../../assets/logo.png" />
-                        </IonAvatar>
+                        <IonAvatar slot="start">
+                            <img src="https://avatars2.githubusercontent.com/u/19812642?s=460&v=4" alt="user profile" />
+                        </IonAvatar> 
                     </IonTabButton>
                 </IonTabBar>
             </IonTabs>
