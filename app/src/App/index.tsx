@@ -42,7 +42,9 @@ const App = () => {
                 <Route
                   exact
                   path="/obligations"
-                  component={UserGroup.Officer ? OfficerObligations : ConsultantObligations}
+                  component={
+                    userGroup === UserGroup.Officer ? OfficerObligations : ConsultantObligations
+                  }
                 />
               </IonRouterOutlet>
             </IonSplitPane>
