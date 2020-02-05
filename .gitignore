@@ -2,3 +2,7 @@ node_modules
 build
 app/src/contracts
 .DS_Store
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/devocoin/config/applicationhost.config
+.vs/devocoin/v16/.suo

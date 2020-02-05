@@ -1,9 +1,10 @@
 import React from 'react';
+
 import { IonItemOption, IonIcon, IonGrid, IonRow, IonCol, IonRouterLink } from '@ionic/react';
 import getObligations from 'mocks/api/getObligations';
 import Page from 'layouts/Page';
 import ObligationsList from 'components/ObligationsList';
-import { archive } from 'ionicons/icons';
+import { archive} from 'ionicons/icons';
 import Coins from 'components/CoinsCard';
 import Rank from 'components/RankCard';
 
