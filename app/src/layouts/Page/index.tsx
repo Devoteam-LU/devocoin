@@ -55,8 +55,8 @@ const Page = ({ children, title }: IPageProps) => (
             <IonTabButton tab="search">
                 <IonIcon icon={search} />
             </IonTabButton>
-            <IonTabButton tab="add">
-                <IonIcon icon={addCircle} size="large" color="primary" />
+            <IonTabButton tab="add" >
+                <IonIcon icon={addCircle} color="primary" />
             </IonTabButton>
             <IonTabButton tab="send">
                 <IonIcon icon={send} />
