@@ -9,6 +9,43 @@
 - Clone the [devocoin repository](https://github.com/Devoteam-LU/devocoin)
 - Pick a [task](#contribute) and open a [pull request](https://github.com/Devoteam-LU/devocoin/pulls)
 
+## Install
+
+Ìnstall yarn
+```
+npm install -g yarn
+``
+Clone the project
+```
+$ git clone https://github.com/Devoteam-LU/devocoin.git
+```
+Move to the project directory 
+```
+$ cd devocoin
+```
+Install NPM dependencies for drizzle:
+```
+$ yarn
+```
+Deploy and run test blockchain
+```
+$ truffle develop 
+$ compile
+$ migrate
+```
+Open a new terminal and move to the app directory 
+```
+$ cd devocoin/app
+```
+Install NPM dependencies for the React application :
+```
+$ yarn
+```
+Run Devocoin application
+```
+$ npm run start
+```
+
 ## Contribute
 
 See [Devocoin Project Board](https://github.com/Devoteam-LU/devocoin/projects/1)
