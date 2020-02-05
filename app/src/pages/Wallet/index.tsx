@@ -1,12 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { IonButton } from '@ionic/react';
 import QRCode from 'qrcode.react';
-import { newContextComponents } from '@drizzle/react-components';
-import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
+import { useDrizzleState } from 'utils/drizzleHooks';
 import Page from 'layouts/Page';
-
-const { ContractData } = newContextComponents;
+import Coins from 'components/CoinsCard';
 
 const filterTransactions = ({ status }: any): boolean => status === 'success';
 const mapTransactions = ({
@@ -24,29 +21,13 @@ const mapTransactions = ({
 );
 
 const Wallet = () => {
-  const { drizzle } = useDrizzle();
   const drizzleState = useDrizzleState();
   const { accounts, transactions } = drizzleState;
 
   return (
     <Page title="Wallet">
       <div>
-        <h2>My Balance</h2>
-        <ContractData
-          drizzle={drizzle}
-          drizzleState={drizzleState}
-          contract="DevocoinToken"
-          method="balanceOf"
-          methodArgs={[accounts[0]]}
-        />
-        <ContractData
-          drizzle={drizzle}
-          drizzleState={drizzleState}
-          contract="DevocoinToken"
-          method="symbol"
-          hideIndicator
-        />
-        <br />
+        <Coins />
         <IonButton>SEND</IonButton>
         <IonButton>REQUEST</IonButton>
       </div>
@@ -62,9 +43,6 @@ const Wallet = () => {
           .filter(filterTransactions)
           .map(mapTransactions)}
       </div>
-      <Link to="/">
-        <IonButton>Go to Home</IonButton>
-      </Link>
     </Page>
   );
 };

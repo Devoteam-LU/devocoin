@@ -1,62 +1,48 @@
 import React from 'react';
-import { IonRouterOutlet } from '@ionic/react';
-import { Route } from 'react-router';
-import { IonContent, IonItemOption, IonIcon, IonTabs, IonTabBar, IonTabButton, IonLabel, IonBadge, IonAvatar } from '@ionic/react';
+
+import { IonItemOption, IonIcon, IonGrid, IonRow, IonCol, IonRouterLink } from '@ionic/react';
 import getObligations from 'mocks/api/getObligations';
 import Page from 'layouts/Page';
 import ObligationsList from 'components/ObligationsList';
-import { archive, addCircle, send, search, ribbon } from 'ionicons/icons';
+import { archive} from 'ionicons/icons';
+import Coins from 'components/CoinsCard';
+import Rank from 'components/RankCard';
 
 const Home = () => {
-    const obligations = getObligations();
-    return (
-        <Page title="Home">
-            <IonContent>
-                <ObligationsList
-                    obligations={obligations}
-                    startOption={
-                        <IonItemOption color="danger" onClick={() => { }}>
-                            <IonIcon slot="start" icon={archive} size="large" />
-                        </IonItemOption>
-                    }
-                    endOption={
-                        <IonItemOption color="success" onClick={() => { }}>
-                            Complete
-            </IonItemOption>
-                    }
-                />
-            </IonContent>
-            <IonTabs>
-                <IonRouterOutlet>
-
-                </IonRouterOutlet>
-                <IonTabBar slot="bottom">
-                    <IonTabButton tab="ribbon">
-                        <IonIcon icon={ribbon} size="large" />
-                        <IonBadge>6</IonBadge>
-                    </IonTabButton>
-
-                    <IonTabButton tab="search">
-                        <IonIcon icon={search} size="large"  />
-                  
-                    </IonTabButton>
-
-                    <IonTabButton tab="add">
-                        <IonIcon icon={addCircle} size="large" />
-                    </IonTabButton>
-
-                    <IonTabButton tab="send">
-                        <IonIcon icon={send} size="large" />
-                    </IonTabButton>
-                    <IonTabButton tab="profile">
-                        <IonAvatar slot="start">
-                            <img src="https://avatars2.githubusercontent.com/u/19812642?s=460&v=4" alt="user profile" />
-                        </IonAvatar> 
-                    </IonTabButton>
-                </IonTabBar>
-            </IonTabs>
-        </Page>
-    );
+  const obligations = getObligations();
+  return (
+    <Page title="Home">
+      <IonGrid>
+        <IonRow>
+          <IonCol>
+            <IonRouterLink routerLink="/wallet">
+              <Coins />
+            </IonRouterLink>
+          </IonCol>
+          <IonCol>
+            <Rank ordinal={3} outOf={116} />
+          </IonCol>
+        </IonRow>
+        <IonRow>
+          <IonCol>
+            <ObligationsList
+              obligations={obligations}
+              startOption={
+                <IonItemOption color="danger" onClick={() => {}}>
+                  <IonIcon slot="start" icon={archive} size="large" />
+                </IonItemOption>
+              }
+              endOption={
+                <IonItemOption color="success" onClick={() => {}}>
+                  Complete
+                </IonItemOption>
+              }
+            />
+          </IonCol>
+        </IonRow>
+      </IonGrid>
+    </Page>
+  );
 };
 
 export default Home;
