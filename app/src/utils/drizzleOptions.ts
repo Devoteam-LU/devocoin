@@ -1,8 +1,8 @@
 import Web3 from 'web3';
+import { IDrizzleOptions } from '@drizzle/store';
 import SimpleStorage from '../contracts/SimpleStorage.json';
 import ComplexStorage from '../contracts/ComplexStorage.json';
 import DevocoinToken from '../contracts/DevocoinToken.json';
-import { IDrizzleOptions } from '@drizzle/store';
 
 interface IDrizzleOptionsCustom extends IDrizzleOptions {
   contracts: any;

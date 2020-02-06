@@ -1,12 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { IonButton } from '@ionic/react';
 import QRCode from 'qrcode.react';
+<<<<<<< HEAD
 import { newContextComponents } from '@drizzle/react-components';
 import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
 import web3Service from 'utils/blockchain-service'
 import Page from 'layouts/Page';
 
+=======
+import { useDrizzleState } from 'utils/drizzleHooks';
+import Page from 'layouts/Page';
+import Coins from 'components/CoinsCard';
+>>>>>>> feature/bottom-navigation-bar
 
 class WalletComponent extends React.Component {
     transactionList = { data: [] };
@@ -29,7 +34,6 @@ class WalletComponent extends React.Component {
 
 
 const Wallet = () => {
-  const { drizzle } = useDrizzle();
   const drizzleState = useDrizzleState();
     const { accounts, transactions} = drizzleState;
 
@@ -62,6 +66,7 @@ const Wallet = () => {
   return (
     <Page title="Wallet">
       <div>
+<<<<<<< HEAD
         <h2>My Balance</h2>
         <ContractData
           drizzle={drizzle}
@@ -79,6 +84,10 @@ const Wallet = () => {
         />
         <br />
         <IonButton >SEND</IonButton>
+=======
+        <Coins />
+        <IonButton>SEND</IonButton>
+>>>>>>> feature/bottom-navigation-bar
         <IonButton>REQUEST</IonButton>
       </div>
       <div>
@@ -93,9 +102,6 @@ const Wallet = () => {
           .filter(filterTransactions)
           .map(mapTransactions)} 
       </div>
-      <Link to="/">
-        <IonButton>Go to Home</IonButton>
-      </Link>
     </Page>
   );
 };

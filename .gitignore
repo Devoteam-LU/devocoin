@@ -2,9 +2,16 @@ node_modules
 build
 app/src/contracts
 .DS_Store
+<<<<<<< HEAD
 .vs/*
 package-lock.json
 package_BACKUP_7304.json
 package_BASE_7304.json
 package_LOCAL_7304.json
 package_REMOTE_7304.json
+=======
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/devocoin/config/applicationhost.config
+.vs/devocoin/v16/.suo
+>>>>>>> feature/bottom-navigation-bar
