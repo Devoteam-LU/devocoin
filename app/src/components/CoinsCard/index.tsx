@@ -20,7 +20,7 @@ const Coins = () => {
 
   return (
     <IonCard color="success">
-      <IonCardHeader>
+      <IonCardHeader  color="success">
         <IonCardSubtitle>Devocoins</IonCardSubtitle>
       </IonCardHeader>
       <IonCardContent>
