@@ -1,6 +1,6 @@
-import consultantUser from 'mocks/json/consultantUser.json'
+import officerUser from 'mocks/json/officerUser.json'
 import { User } from 'common/types';
 
-const getUser = (): User => consultantUser as User;
+const getUser = (): User => officerUser as User;
 
 export default getUser;

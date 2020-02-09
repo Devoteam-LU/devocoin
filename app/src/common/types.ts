@@ -25,3 +25,7 @@ export interface ObligationListItemOptions {
     startOption?: ReactNode;
     endOption?: ReactNode;
 }
+
+export interface DrizzleContractForm {
+    handleSubmit: () => void;
+  }
