@@ -3,9 +3,9 @@ import { IonItemOption } from '@ionic/react';
 import { newContextComponents } from '@drizzle/react-components';
 import getObligationsPendingApproval from 'mocks/api/getObligationsPendingApproval';
 import ObligationsList from 'components/ObligationsList';
-import ConsultantObligations from './ConsultantObligations';
 import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
 import { DrizzleContractForm } from 'common/types';
+import ConsultantObligations from './ConsultantObligations';
 
 const { ContractForm } = newContextComponents;
 
