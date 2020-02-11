@@ -12,12 +12,12 @@ import {
 } from '@ionic/react';
 import { menu } from 'ionicons/icons';
 
-interface IPageProps {
+interface Props {
   children: React.ReactNode;
   title: React.ReactNode;
 }
 
-const Page = ({ children, title }: IPageProps) => (
+const Page = ({ children, title }: Props) => (
   <IonPage>
     <IonHeader>
       <IonToolbar>
