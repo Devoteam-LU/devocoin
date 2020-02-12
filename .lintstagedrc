@@ -1,3 +1,3 @@
 {
-  "**/*.ts?(x)": ["cd app && eslint --fix", "cd app && prettier-eslint --write"]
+  "**/*.ts?(x)": ["npm run lint:fix", "npm run lint-prettier:fix"]
 }

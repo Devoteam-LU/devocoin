@@ -34,7 +34,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint:fix": "eslint --fix \"src/**/*.{js,ts,tsx}\" ",
-    "lint-prettier:fix": "prettier-eslint --write \"src/**/*.{js,ts,tsx}\" ",
+    "lint-prettier:fix": "prettier-eslint --write",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
