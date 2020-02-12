@@ -26,7 +26,8 @@
     "@openzeppelin/contracts": "^2.4.0"
   },
   "devDependencies": {
-    "husky": "^4.2.2",
+    "eslint": "^6.6.0"
+,    "husky": "^4.2.2",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "prettier-eslint-cli": "^5.0.0",
