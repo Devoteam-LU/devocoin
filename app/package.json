@@ -25,7 +25,7 @@
   "devDependencies": {
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.20.0"
+    "eslint-plugin-import": "^2.20.1"
   },
   "scripts": {
     "start": "react-scripts start",
