@@ -9,6 +9,8 @@
   "scripts": {
     "test": "cd app && npm run test",
     "start": "cd app && npm start",
+    "lint:fix": "cd app && npm run lint:fix",
+    "lint-prettier:fix": "cd app && npm run lint-prettier:fix",
     "compile": "truffle compile"
   },
   "repository": {
@@ -26,11 +28,8 @@
     "@openzeppelin/contracts": "^2.4.0"
   },
   "devDependencies": {
-    "eslint": "^6.6.0"
-,    "husky": "^4.2.2",
+    "husky": "^4.2.2",
     "lint-staged": "^10.0.7",
-    "prettier": "^1.19.1",
-    "prettier-eslint-cli": "^5.0.0",
     "truffle": "^5.1.10"
   }
 }
