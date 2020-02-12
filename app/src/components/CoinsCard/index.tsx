@@ -8,7 +8,7 @@ import {
   IonItem,
 } from '@ionic/react';
 import { newContextComponents } from '@drizzle/react-components';
-import { wallet } from 'ionicons/icons';
+import { walletOutline, walletSharp } from 'ionicons/icons';
 import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
 
 const { ContractData } = newContextComponents;
@@ -20,12 +20,12 @@ const Coins = () => {
 
   return (
     <IonCard color="success">
-      <IonCardHeader  color="success">
+      <IonCardHeader color="success">
         <IonCardSubtitle>Devocoins</IonCardSubtitle>
       </IonCardHeader>
       <IonCardContent>
         <IonItem color="inherit" lines="none">
-          <IonIcon slot="start" icon={wallet} />
+          <IonIcon slot="start" ios={walletOutline} md={walletSharp} />
           <h1>
             <strong>
               <ContractData

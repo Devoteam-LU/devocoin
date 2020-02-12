@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonGrid, IonRow, IonCol, IonRouterLink, IonItemOption, IonIcon } from '@ionic/react';
 import { newContextComponents } from '@drizzle/react-components';
-import { archive } from 'ionicons/icons';
+import { archive, archiveSharp } from 'ionicons/icons';
 import { DrizzleContractForm } from 'common/types';
 import getObligations from 'mocks/api/getObligations';
 import { useDrizzle, useDrizzleState } from 'utils/drizzleHooks';
@@ -37,7 +37,7 @@ const Home = () => {
           <ContractForm
             render={({ handleSubmit }: DrizzleContractForm) => (
               <IonItemOption color="danger" onClick={handleSubmit}>
-                <IonIcon slot="start" icon={archive} size="large" />
+                <IonIcon slot="start" size="large" ios={archive} md={archiveSharp} />
               </IonItemOption>
             )}
             drizzle={drizzle}

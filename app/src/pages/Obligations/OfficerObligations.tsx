@@ -46,6 +46,13 @@ const OfficerObligations = () => {
           />
         }
       />
+      Create Obligation
+      <ContractForm
+        drizzle={drizzle}
+        drizzleState={drizzleState}
+        contract="ObligationRegistry"
+        method="create"
+      />
     </ConsultantObligations>
   );
 };

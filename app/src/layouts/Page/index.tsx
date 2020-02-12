@@ -10,7 +10,7 @@ import {
   IonIcon,
   IonContent,
 } from '@ionic/react';
-import { menu } from 'ionicons/icons';
+import { menu, menuSharp } from 'ionicons/icons';
 
 interface Props {
   children: React.ReactNode;
@@ -24,7 +24,7 @@ const Page = ({ children, title }: Props) => (
         <IonButtons slot="start">
           <IonMenuToggle>
             <IonButton>
-              <IonIcon slot="icon-only" icon={menu}></IonIcon>
+              <IonIcon slot="icon-only" ios={menu} md={menuSharp}></IonIcon>
             </IonButton>
           </IonMenuToggle>
         </IonButtons>
