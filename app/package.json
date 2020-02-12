@@ -33,8 +33,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint:fix": "eslint --fix \"src/**/*.{js,ts,tsx}\" ",
-    "lint-prettier:fix": "prettier-eslint --write",
+    "lint:fix": "eslint --fix \"$(pwd)/src/**/*.{js,ts,tsx}\"",
+    "lint-prettier:fix": "prettier-eslint --write \"$(pwd)/src/**/*.{js,ts,tsx}\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

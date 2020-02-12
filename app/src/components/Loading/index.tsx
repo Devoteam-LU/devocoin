@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React, { ReactNode } from 'react';
 import { IonLoading } from '@ionic/react';
 import { useDrizzleState } from 'utils/drizzleHooks';
 

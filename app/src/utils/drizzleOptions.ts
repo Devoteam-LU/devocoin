@@ -17,7 +17,12 @@ const drizzleOptions: IDrizzleOptionsCustom = {
   contracts: [SimpleStorage, ComplexStorage, DevocoinToken, Obligation, ObligationRegistry],
   events: {
     SimpleStorage: ['StorageSet'],
-    Obligation: ['ObligationCompleted', 'ObligationApproved', 'ObligationRejected', 'ObligationArchived'],
+    Obligation: [
+      'ObligationCompleted',
+      'ObligationApproved',
+      'ObligationRejected',
+      'ObligationArchived',
+    ],
   },
   polls: {
     accounts: 1500,
