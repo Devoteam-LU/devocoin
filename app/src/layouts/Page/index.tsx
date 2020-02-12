@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {
   IonPage,
   IonHeader,
@@ -13,8 +13,8 @@ import {
 import { menu, menuSharp } from 'ionicons/icons';
 
 interface Props {
-  children: React.ReactNode;
-  title: React.ReactNode;
+  children: ReactNode;
+  title: ReactNode;
 }
 
 const Page = ({ children, title }: Props) => (

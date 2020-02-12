@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import { IonLoading } from '@ionic/react';
 import { useDrizzleState } from 'utils/drizzleHooks';
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const Loading = ({ children }: Props) => {
