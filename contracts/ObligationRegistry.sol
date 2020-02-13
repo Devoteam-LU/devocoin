@@ -3,18 +3,25 @@ pragma solidity >=0.4.21 <0.7.0;
 import "./Obligation.sol";
 
 contract ObligationRegistry {
-    mapping(address => address) public obligations;
+    mapping(address => Obligation[]) public obligationsByBeneficiary;
 
-    function create(
-        address _address,
-        uint256 _reward,
-        address payable _beneficiary
-    ) public returns (address) {
-        Obligation T = new Obligation(_reward, _beneficiary);
-        address deployedAddress = address(T);
-        obligations[_address] = deployedAddress;
+    function createObligation(uint256 _reward, address payable _beneficiary)
+        public
+        returns (address)
+    {
+        Obligation obligation = new Obligation(_reward, _beneficiary);
+        address deployedAddress = address(obligation);
+        obligationsByBeneficiary[_beneficiary].push(obligation);
+
         return deployedAddress;
     }
 
-    function getObligationsByAddress(address _address) public {}
+    function getObligationsByBeneficiary(address _beneficiary)
+        public
+        view
+        returns (Obligation[] memory)
+    {
+        return obligationsByBeneficiary[_beneficiary];
+
+    }
 }
