@@ -1,6 +1,7 @@
 const SimpleStorage = artifacts.require("SimpleStorage");
 const DevocoinToken = artifacts.require("DevocoinToken");
 const ComplexStorage = artifacts.require("ComplexStorage");
+const Obligation = artifacts.require("Obligation");
 const ObligationRegistry = artifacts.require("ObligationRegistry");
 
 module.exports = function(deployer) {
