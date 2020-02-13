@@ -15,4 +15,6 @@ contract ObligationRegistry {
         obligations[_address] = deployedAddress;
         return deployedAddress;
     }
+
+    function getObligationsByAddress(address _address) public {}
 }
