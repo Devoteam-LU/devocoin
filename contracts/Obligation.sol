@@ -9,6 +9,7 @@ contract Obligation {
     bool public archived;
 
     // Events that will be emitted on changes.
+    event ObligationCreated(string _message);
     event ObligationCompleted(string _message);
     event ObligationApproved(string _message);
     event ObligationRejected(string _message);
@@ -17,6 +18,7 @@ contract Obligation {
     constructor(uint256 _reward, address payable _beneficiary) public {
         beneficiary = _beneficiary;
         reward = _reward;
+        emit ObligationCreated("Obligation created");
     }
 
     function archive() public {
