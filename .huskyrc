@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "pre-commit": "lint-staged",
+    "pre-push": "cd app && npm test -- --coverage --watchAll=false"
+  }
+}

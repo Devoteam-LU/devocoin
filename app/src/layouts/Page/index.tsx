@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import {
   IonPage,
   IonHeader,
@@ -10,21 +10,21 @@ import {
   IonIcon,
   IonContent,
 } from '@ionic/react';
-import { menu } from 'ionicons/icons';
+import { menu, menuSharp } from 'ionicons/icons';
 
-interface IPageProps {
-  children: React.ReactNode;
-  title: React.ReactNode;
+interface Props {
+  children: ReactNode;
+  title: ReactNode;
 }
 
-const Page = ({ children, title }: IPageProps) => (
+const Page = ({ children, title }: Props) => (
   <IonPage>
     <IonHeader>
       <IonToolbar>
         <IonButtons slot="start">
           <IonMenuToggle>
             <IonButton>
-              <IonIcon slot="icon-only" icon={menu}></IonIcon>
+              <IonIcon slot="icon-only" ios={menu} md={menuSharp}></IonIcon>
             </IonButton>
           </IonMenuToggle>
         </IonButtons>

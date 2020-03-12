@@ -69,9 +69,9 @@ body.dark {
 }
 
 /*
-   * iOS Dark Theme
-   * -------------------------------------------
-   */
+ * iOS Dark Theme
+ * -------------------------------------------
+ */
 
 .ios body.dark {
   --ion-background-color: #000000;
@@ -107,9 +107,9 @@ body.dark {
 }
 
 /*
-   * Material Design Dark Theme
-   * -------------------------------------------
-   */
+ * Material Design Dark Theme
+ * -------------------------------------------
+ */
 
 .md body.dark {
   --ion-background-color: #121212;

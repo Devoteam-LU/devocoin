@@ -8,7 +8,7 @@ import {
   IonIcon,
   IonText,
 } from '@ionic/react';
-import { trophy } from 'ionicons/icons';
+import { trophy, trophySharp } from 'ionicons/icons';
 import getOrdinalSuffixOf from 'utils/getOrdinalSuffixOf';
 
 interface Props {
@@ -18,13 +18,13 @@ interface Props {
 
 const Rank = ({ ordinal, outOf }: Props) => {
   return (
-    <IonCard routerLink="/" color="tertiary">
-      <IonCardHeader>
+    <IonCard color="tertiary">
+      <IonCardHeader color="inherit">
         <IonCardSubtitle>Rank</IonCardSubtitle>
       </IonCardHeader>
       <IonCardContent>
-        <IonItem button color="inherit" lines="none">
-          <IonIcon slot="start" icon={trophy} />
+        <IonItem color="inherit" lines="none">
+          <IonIcon slot="start" ios={trophy} md={trophySharp} />
           <h1>
             <strong>{`${ordinal}${getOrdinalSuffixOf(ordinal)}`}</strong>
           </h1>

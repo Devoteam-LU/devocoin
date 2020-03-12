@@ -10,10 +10,10 @@ import {
   IonLabel,
   IonMenuToggle,
 } from '@ionic/react';
-import { home, wallet, calendar } from 'ionicons/icons';
+import { home, wallet, calendar, homeSharp, walletSharp, calendarSharp } from 'ionicons/icons';
 
 const Navigation = () => (
-  <IonMenu contentId="mainContent" type="push">
+  <IonMenu contentId="mainContent">
     <IonHeader>
       <IonToolbar />
     </IonHeader>
@@ -21,19 +21,19 @@ const Navigation = () => (
       <IonList>
         <IonMenuToggle autoHide={false}>
           <IonItem routerLink="/">
-            <IonIcon slot="start" icon={home} />
+            <IonIcon slot="start" ios={home} md={homeSharp} />
             <IonLabel>Home</IonLabel>
           </IonItem>
         </IonMenuToggle>
         <IonMenuToggle autoHide={false}>
           <IonItem routerLink="/wallet">
-            <IonIcon slot="start" icon={wallet} />
+            <IonIcon slot="start" ios={wallet} md={walletSharp} />
             <IonLabel>Wallet</IonLabel>
           </IonItem>
         </IonMenuToggle>
         <IonMenuToggle autoHide={false}>
           <IonItem routerLink="/obligations">
-            <IonIcon slot="start" icon={calendar} />
+            <IonIcon slot="start" ios={calendar} md={calendarSharp} />
             <IonLabel>Obligations</IonLabel>
           </IonItem>
         </IonMenuToggle>
